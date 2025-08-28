@@ -1,19 +1,28 @@
 @media screen and (min-width:992px) and (max-width:1390px){
     .responsive-md{
         grid-template-columns: repeat(2,1fr);
+
     }
 }
 @media  screen and (min-width:650px) and (max-width:991px) {
     .responsive-sm{
         grid-template-columns: repeat(1,1fr);
-        width: 60%;
+        width: 63%;
     }
     .w-sm{
-        width: 40%;
+        width: 42%;
+    }
+    .all-service{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .btn-clr{
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
     
 }
-@media screen and (max-width:650px) {
+@media screen and (max-width:649px) {
     .responsive-mobile{
         grid-template-columns: repeat(1,1fr);
         width: 100%;
