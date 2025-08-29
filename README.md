@@ -9,7 +9,8 @@ question 01: What is the difference between getElementById, getElementsByClassNa
  querySelector('css selector') : select the first match any single element , it return the first match elemen.
 <br>
 querySelectorAll('css selector') : it selects multiple elements with same selector name . it returns static nodelist.
-<br>
+<br><br>
+
 
 question 02: How do you create and insert a new element into the DOM?<br>
 <!-- answer of question 02 -->
@@ -32,13 +33,12 @@ Event Bubbling is a concept in the DOM event flow where an event starts from the
 <br>
 How it works : 
 <br>
-1.User interacts with a target element like clicks a button inside a <div>.
+1.User interacts with a target element like clicks a button inside a div.
 <br>
 2.The event fires on the target button first.
 <br>
-3.Then it bubbles up to the parent <div>, then <body>, then <html>, and finally document.
-<br>
-
+3.Then it bubbles up to the parent div, then body, then html , and finally document.
+<br><br>
 question 04: What is Event Delegation in JavaScript? Why is it useful?<br>
 <!-- answer of question 04 -->
 04.ans:-
@@ -48,7 +48,7 @@ Event Delegation is a JavaScript technique where you add a single event listener
 useful because :
 <br>
 Fewer event listeners and better performance for large DOM trees
-<br>
+<br><br>
 
 question 05: What is the difference between preventDefault() and stopPropagation() methods?<br>
 <!-- answer of question 05 -->
