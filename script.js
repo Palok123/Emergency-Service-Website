@@ -7,6 +7,7 @@ function addHistory(id){
   const serviceName = getById(id).parentElement.parentElement.children[1];
   const servicePhnNo =  getById(id).parentElement.parentElement.children[3];
     const div = document.createElement('div');
+    div.classList.add('dynamic-history')
     div.innerHTML = `
      <div class="flex justify-between items-center bg-[#d9d9d971] mt-3 p-3 rounded-lg">
                         <div>
@@ -23,6 +24,7 @@ function addHistory(id){
 }
 
 // heart button functionality
+
 const hearts = document.getElementsByClassName('fa-heart');
 for(const heart of hearts){
     heart.addEventListener('click',function(){
@@ -32,7 +34,8 @@ for(const heart of hearts){
     })
 }
 
-//  call button functionality
+//  call button functionality: 
+
 // emergency service  
 getById('emergency-btn').addEventListener('click',function(){
 
@@ -160,3 +163,11 @@ getById('woman-child-btn').addEventListener('click',function(){
     addHistory('railway-service-btn');
  })
 
+// clear button functionality 
+getById('clear-btn').addEventListener('click',function(){
+    const histories = document.getElementsByClassName('dynamic-history');
+    for(const history of histories)
+    {
+       history.style.display = 'none';
+    }
+})
