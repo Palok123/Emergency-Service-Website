@@ -171,3 +171,27 @@ getById('clear-btn').addEventListener('click',function(){
        history.style.display = 'none';
     }
 })
+
+// copy button style
+ const copyButtons = document.getElementsByClassName('btn-cpy');
+ for(const copyButton of copyButtons )
+    {
+      copyButton.addEventListener('click',function(){
+
+         // getting the copid text
+         const text = copyButton.parentElement.parentElement.children[3].innerText;
+         
+         // coping using Clipbord Api
+         navigator.clipboard.writeText(text)
+        .then(() => {
+          alert(`Number Copied ${text}`);
+        })
+        .catch(err => {
+          console.error("Failed to copy text: ", err);
+        });
+         
+         let totalCopy = parseInt(getById('copy-count-btn').innerText);
+         totalCopy = totalCopy + 1;
+         getById('copy-count-btn').innerText = totalCopy;
+      })
+    }
